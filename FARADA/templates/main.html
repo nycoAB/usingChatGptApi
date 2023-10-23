@@ -1,0 +1,16 @@
+<head>
+
+</head>
+<body>
+    <h3> ask me </h3>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" class = "form-cntroll" name = "user_input">
+        <button type="submit" class="btn btn-primery mt-3">SUBMIT</button>
+    </form>
+    {% if response %}
+        <div>
+            {{ response|safe }}
+        </div>
+    {% endif %}
+</body>
